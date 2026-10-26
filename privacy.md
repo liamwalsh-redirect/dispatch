@@ -179,6 +179,7 @@ If this policy changes, the new version will be posted at [liamwalsh-redirect.gi
 For questions about this privacy policy:
 
 Liam Walsh
+
 Email: dispatch.news@icloud.com
 
 See also: [Terms of Use](https://liamwalsh-redirect.github.io/dispatch/terms) · [Support](https://liamwalsh-redirect.github.io/dispatch/support)
