@@ -14,6 +14,7 @@ Dispatch is a news reader for iPhone. It brings the publications and newsletters
 - **Summary, 5 Facts and 5 W's** need a device with Apple Intelligence turned on. Elsewhere they show "Apple Intelligence isn't available on this device."
 - **Apple Watch:** watchOS 26.2 or later.
 - **Home Screen and Lock Screen widgets**, **CarPlay**, **Open in Dispatch News** in the share sheet and the **Open in Dispatch News** button in Safari are included.
+- **Siri:** ask "What's the latest on Dispatch?", "Give me my Dispatch briefing" or "Play my saved articles on Dispatch". The Shortcuts app lists every command.
 
 ## Get in touch
 

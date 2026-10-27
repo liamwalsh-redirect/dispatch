@@ -37,7 +37,7 @@ The following data is stored on your device and, where noted, synced across your
 - **Custom feeds.** RSS feed addresses you add yourself. Synced via iCloud.
 - **Headline cache.** Recently fetched headlines, cached in a file on your device for offline access and a fast launch. On-device only.
 - **AI Suite results.** Summary, 5 Facts and 5 W's, generated on your device and kept so they show again quickly. On-device only.
-- **Everything else the app keeps.** Article caches and offline copies, images, papers and magazines, past newsletter editions (up to 100 per newsletter, or six months), video and podcast lists, BBC News's schedule, a tally of how many stories each source has published lately, and writers' photos and bios from stories you've opened stay on your device.
+- **Everything else the app keeps.** Article caches and offline copies, images and publishers' logos, papers and magazines, past newsletter editions (up to 100 per newsletter, or six months), video and podcast lists, the Dispatches library as last read, Trending's list of names, an index of publishers' audio for stories, BBC News's schedule, a tally of how many stories each source has published lately, a 24-hour record of how each source's feeds and pages answered, each feed's recent failures (so a feed that keeps failing is asked less often), and writers' photos and bios from stories you've opened stay on your device.
 - **Tip jar receipts.** Apple's records of any tips you make, managed by Apple's StoreKit.
 
 All iCloud syncing goes through your own iCloud account and is governed by Apple's privacy policy and your iCloud settings. Dispatch has no access to your iCloud account information. Dispatches reads from a public CloudKit database that holds only what Dispatch's editor publishes there, such as the picks; nothing you read or save is written there.
@@ -69,6 +69,7 @@ The requests are:
 - **Feed fetches.** Dispatch fetches publishers' public RSS and Atom feeds to show headlines. They carry no identifier from Dispatch. Feeds you've signed in to (Substack, The Information's subscriber feed, custom feeds with a login) send that sign-in to that publisher only.
 - **Weekend section pages.** For the Weekend, Dispatch reads a few publishers' section pages (Bloomberg, The Information and The Washington Post) at most once a day, with no cookies. If you're signed in to The Wall Street Journal and The Saturday Essay is on, it reads that page once each Saturday while the app is open, in a hidden web view that starts with no cookies and keeps none afterwards, so that read is signed out. The page's own scripts run there, as they would in a browser.
 - **Article pages.** When you open a headline, the app fetches the article's web page to show it in Dispatch's reader. This is the same as visiting the page in a web browser: if you've signed in to that publisher, your sign-in goes with the request, as it would in Safari.
+- **Today's papers.** The New York Times's and The Wall Street Journal's print editions load in a web view you don't see, as they would in Safari: with your sign-in to that publisher if you have one, and with the page's own scripts. If The New York Times asks to check you're a person, Newspapers shows Verify, which opens the page for you to answer.
 - **Images.** Article photos and podcast artwork load from publishers' servers over HTTPS.
 - **Video lists.** Media › Videos and the Weekend's Watch & listen read each channel's public video feed from YouTube, with no cookies, and show each video's picture from YouTube's image server.
 - **Live TV and video.** Bloomberg TV and CBS News live streams, and Bloomberg's videos, load when you choose to watch them. Bloomberg's videos and the CBS News stream are delivered by Google's ad-insertion service, which adds those publishers' ads to the stream. Dispatch's request for a Bloomberg video sends no cookies and no advertising identifier, and tells Google you've opted out of the sale of your personal information. Google receives your IP address and the video requested, and [Google's Privacy Policy](https://policies.google.com/privacy) applies. BBC News live plays BBC News's own stream on YouTube, in YouTube's embedded player (see [YouTube videos](#youtube-videos)); to pick the stream offered in your iPhone's region, Dispatch reads BBC News's public list of live streams from YouTube, at most once a day while BBC News is chosen, with no cookies; your region setting isn't sent. While BBC News's US stream plays, Dispatch also reads that day's schedule from bbc.co.uk, at most once a day, with no cookies.
@@ -140,12 +141,13 @@ If you turn on notifications for new picks (**Settings › Notifications › New
 
 Send Feedback and "Found a bug? Tell me." open an email to dispatch.news@icloud.com in your mail app. The developer receives only what you write, your email address and, from Send Feedback, the app version in the subject line. Nothing is sent unless you send the email.
 
-## Apple Watch, widgets and extensions
+## Apple Watch, widgets, extensions and Siri
 
 - **Apple Watch.** Your iPhone shares headlines, and the articles you open or save from the watch, with Dispatch on your Apple Watch, and Delete All Data clears the watch. When your iPhone can't send headlines, the watch can fetch two publishers' public feeds itself.
 - **Widgets.** Widgets read headlines and saves from storage shared on this device. The Home Screen widget can also fetch a few publishers' public feeds itself, without your sign-ins.
 - **Safari extension.** The Safari extension remembers, on this device, up to 100 pages where you closed its bar. It makes no network requests.
 - **Share extension.** Open in Dispatch News, in the share sheet, opens a link in Dispatch and makes no network requests.
+- **Siri.** Dispatch's Siri commands (the latest headlines, a source's headlines, a briefing, today's Dispatches) answer from the headlines and picks already on your device and make no request. "Play my saved articles" reads your saved stories aloud, as Listen does.
 
 ## Children's Privacy
 
