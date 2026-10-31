@@ -4,22 +4,22 @@ title: Privacy Policy
 
 # Dispatch Privacy Policy
 
-**Last updated:** October 26, 2026
+**Last updated:** October 30, 2026
 
 ## Summary
 
 Dispatch is a local-first news reader for iPhone. It has no accounts, no analytics of its own, no tracking and no advertising of its own. What you read stays on your device and in your own iCloud.
 
-Some features connect to other companies, and this policy names each one: YouTube's player when you play a YouTube video, Google's video service for some publishers' streams, and OpenAI if you add your own OpenAI key for Listen. With your own key, only the article itself (its title, source and text) and your voice settings are sent; never anything else about you.
+Some features connect to other companies, and this policy names each one, such as YouTube's player when you play a YouTube video and Google's video service for some publishers' streams. When Dispatch loads a publisher's page for its own features, it blocks the page's third-party ad, analytics and tracking code. Pages you open in Dispatch's browser run as they would in Safari.
 
 ## Data Collection
 
 Dispatch itself collects no personal data. Specifically:
 
 - **No user accounts.** The app requires no sign-up, login or registration to use.
-- **No analytics of our own.** Dispatch itself sends no analytics, crash reports or telemetry. YouTube's player and publishers' own web pages, which Dispatch loads when you play or read them, may measure use as they do in a browser.
+- **No analytics of our own.** Dispatch itself sends no analytics, crash reports or telemetry. When Dispatch loads a publisher's page for you (to read or listen to a story, load today's paper, show a writer's page or sign in), it blocks the page's third-party ad, analytics and tracking code; the publisher's own measurement on its own site can still run. YouTube's player, and pages you open in Dispatch's browser, run as they would in Safari and may measure use.
 - **No tracking.** No advertising identifiers, no device fingerprinting, no cross-app tracking. The app shows no App Tracking Transparency prompt because it doesn't track you.
-- **No advertising of our own.** Dispatch shows no ads and contains no ad SDKs. Videos and live streams from publishers, and YouTube's player, can include ads that those companies serve.
+- **No advertising of our own.** Dispatch shows no ads and contains no ad SDKs. Videos and live streams from publishers, and YouTube's player, can include ads that those companies serve. Pages you open in Dispatch's browser show the publisher's own ads, as they would in Safari.
 - **No third-party SDKs.** The app is built only on Apple's frameworks. To play YouTube videos it loads YouTube's embedded player (see [YouTube videos](#youtube-videos)).
 - **No Dispatch servers.** Dispatch has no backend of its own. Dispatches (the editor's picks) is read from Apple's CloudKit, and if you turn on notifications for new picks, Apple keeps a subscription for your iCloud account so it can deliver them. The developer receives only emails you choose to send from Send Feedback or "Found a bug? Tell me."
 
@@ -48,7 +48,7 @@ If you save a photo from an article, Dispatch writes it to your photo library wi
 
 You can delete everything Dispatch has stored at any time from **Settings › Privacy & Data › Delete All Data**. This is provided under Apple App Store Review Guideline 5.1.1(v).
 
-Delete All Data wipes all Dispatch data on this device: reading history and read marks, saved articles and their offline copies, highlights, collections, reading positions, your listening queue, AI Suite results, source preferences (which sources are on, which you prefer or mute, and their order), followed topics and writers, custom feeds, past newsletter editions, video lists, YouTube's video pictures and your video playlist, your OpenAI key, and your sign-in to The Information's subscriber feed. Cookies set by publishers when you signed in are cleared too, so you'll need to sign in to those publishers again. It also removes your notification subscription for new picks and clears Dispatch on your Apple Watch. Dispatch empties what it holds in memory first, so it doesn't save your earlier data back afterwards.
+Delete All Data wipes all Dispatch data on this device: reading history and read marks, saved articles and their offline copies, highlights, collections, reading positions, your listening queue, AI Suite results, source preferences (which sources are on, which you prefer or mute, and their order), followed topics and writers, custom feeds, past newsletter editions, video lists, YouTube's video pictures and your video playlist, and your sign-in to The Information's subscriber feed. Cookies and website data that publishers' pages set, when you signed in or in Dispatch's browser, are cleared too, so you'll need to sign in to those publishers again. It also removes your notification subscription for new picks and clears Dispatch on your Apple Watch. Dispatch empties what it holds in memory first, so it doesn't save your earlier data back afterwards.
 
 **What Delete All Data doesn't remove:**
 
@@ -67,15 +67,15 @@ Dispatch makes network requests in two situations:
 The requests are:
 
 - **Feed fetches.** Dispatch fetches publishers' public RSS and Atom feeds to show headlines. They carry no identifier from Dispatch. Feeds you've signed in to (Substack, The Information's subscriber feed, custom feeds with a login) send that sign-in to that publisher only.
-- **Weekend section pages.** For the Weekend, Dispatch reads a few publishers' section pages (Bloomberg, The Information and The Washington Post) at most once a day, with no cookies. If you're signed in to The Wall Street Journal and The Saturday Essay is on, it reads that page once each Saturday while the app is open, in a hidden web view that starts with no cookies and keeps none afterwards, so that read is signed out. The page's own scripts run there, as they would in a browser.
-- **Article pages.** When you open a headline, the app fetches the article's web page to show it in Dispatch's reader. This is the same as visiting the page in a web browser: if you've signed in to that publisher, your sign-in goes with the request, as it would in Safari.
-- **Today's papers.** The New York Times's and The Wall Street Journal's print editions load in a web view you don't see, as they would in Safari: with your sign-in to that publisher if you have one, and with the page's own scripts. If The New York Times asks to check you're a person, Newspapers shows Verify, which opens the page for you to answer.
+- **Weekend section pages.** For the Weekend, Dispatch reads a few publishers' section pages (Bloomberg, The Information and The Washington Post) at most once a day, with no cookies. If you're signed in to The Wall Street Journal and The Saturday Essay is on, it reads that page once each Saturday while the app is open, in a hidden web view that starts with no cookies and keeps none afterwards, so that read is signed out. The page's own scripts run there, without its third-party ad, analytics and tracking code.
+- **Article pages.** When you open a headline, the app fetches the article's web page to show it in Dispatch's reader. This is the same as visiting the page in a web browser: if you've signed in to that publisher, your sign-in goes with the request, as it would in Safari. Some publishers' pages load in a web view you don't see; Dispatch blocks their third-party ad, analytics and tracking code there. If Dispatch's reader can't show a story, the page opens in Dispatch's browser instead (see below).
+- **Today's papers.** The New York Times's and The Wall Street Journal's print editions load in a web view you don't see, as they would in Safari: with your sign-in to that publisher if you have one, and with the page's own scripts but without its third-party ad, analytics and tracking code. If The New York Times asks to check you're a person, Newspapers shows Verify, which opens the page for you to answer.
 - **Images.** Article photos and podcast artwork load from publishers' servers over HTTPS.
 - **Video lists.** Media › Videos and the Weekend's Watch & listen read each channel's public video feed from YouTube, with no cookies, and show each video's picture from YouTube's image server.
 - **Live TV and video.** Bloomberg TV and CBS News live streams, and Bloomberg's videos, load when you choose to watch them. Bloomberg's videos and the CBS News stream are delivered by Google's ad-insertion service, which adds those publishers' ads to the stream. Dispatch's request for a Bloomberg video sends no cookies and no advertising identifier, and tells Google you've opted out of the sale of your personal information. Google receives your IP address and the video requested, and [Google's Privacy Policy](https://policies.google.com/privacy) applies. BBC News live plays BBC News's own stream on YouTube, in YouTube's embedded player (see [YouTube videos](#youtube-videos)); to pick the stream offered in your iPhone's region, Dispatch reads BBC News's public list of live streams from YouTube, at most once a day while BBC News is chosen, with no cookies; your region setting isn't sent. While BBC News's US stream plays, Dispatch also reads that day's schedule from bbc.co.uk, at most once a day, with no cookies.
 - **Podcasts.** Podcast feeds and episodes come from each podcast's own host.
 
-Background App Refresh follows the system switch (Settings › General › Background App Refresh) and runs only when iOS gives Dispatch time. Dispatch adds no identifier, analytics or advertising of its own to any of these requests. The only credentials sent are the ones you gave a publisher or OpenAI, and each goes only to that company.
+Background App Refresh follows the system switch (Settings › General › Background App Refresh) and runs only when iOS gives Dispatch time. Dispatch adds no identifier, analytics or advertising of its own to any of these requests. The only credentials sent are the ones you gave a publisher, and each goes only to that publisher.
 
 ## YouTube videos
 
@@ -92,14 +92,22 @@ To show you a story's full content, Dispatch also connects to:
 - **X,** to show posts embedded in articles. It sends the post's number, with no cookies.
 - **PressReader,** for the FT's print edition, its front page and its weekend magazines.
 - **rss.app,** which carries one newsletter's feed (Superhuman AI), because the publisher has turned its own feed off.
-- **Trinity Media and Dow Jones,** for some publishers' narration.
+- **Trinity Media and Dow Jones,** for some publishers' narration. For The Information and WWD, Trinity's player loads in a web view you don't see, which keeps no cookies or website data, only until it names the story's narration file; it's closed then and plays nothing. Dispatch blocks the player's own measurement there, and any third-party ad, analytics or tracking code.
 - **Publishers' author pages,** for a writer's photo and bio. Most are read with no cookies. When you open a writer's page for the FT, Bloomberg or The Wall Street Journal and Dispatch is missing their photo, title or bio, it loads that writer's page on the publisher's site once, the way it opens a story, with your sign-in to that publisher.
 - **Charts and graphics** embedded in some stories, which load from their publisher in a web view that keeps no cookies or website data.
 - **Podcast hosts.**
 
 Each sees your IP address and the item requested, as any website would, and its own privacy policy applies. Dispatch sends them nothing else about you.
 
-## AI Features and OpenAI
+## Dispatch's browser
+
+Some pages open in Dispatch's own browser rather than its reader. Videos that Dispatch can't play in its own player or in YouTube's open on their story's page there, as do stories the reader can't show, pages you ask to see on the publisher's site, and posts from X or Instagram whose app isn't installed. It has an address bar, back, forward, reload and share, and you can go anywhere from it, as in Safari. Nothing loads until you tap.
+
+It uses the same sign-ins as the rest of Dispatch, so you don't sign in again. Pages there run as they would in Safari, with the publisher's own ads and measurement; Dispatch doesn't block them there. Dispatch's only code in the browser finds the video on the page and scrolls to it, notes when the page starts playing so other audio can pause, and pauses the page's sound when other audio starts or you close it. It reads nothing else from the page and sends nothing off your device. Cookies and website data the pages set stay on this device with your sign-ins, and Delete All Data clears them.
+
+The reader's Safari button and links to sites Dispatch doesn't carry still open Safari, or the default browser you've chosen.
+
+## AI features
 
 Dispatch's AI Suite (Summary, 5 Facts and 5 W's) runs on **Apple Foundation Models, on your device**. No network request is made for these tabs, and the article never leaves your device for them. Dispatch also uses Apple's on-device model to match stories in the FT's print edition to their web pages; that stays on your device too.
 
@@ -107,19 +115,9 @@ Apple Foundation Models is available on iOS 26 and later, on devices with Apple 
 
 Apple Intelligence is a trademark of Apple Inc., registered in the U.S. and other countries.
 
-**Listen** is the only feature that can use OpenAI, and only once you've added your own OpenAI API key:
+**Listen** reads stories aloud with Apple's voices, on your device, or plays the publisher's own audio where there is one (see Other services Dispatch uses). Nothing leaves your device for Apple's voices.
 
-- **Without a key,** Listen reads stories with Apple's on-device voices, or plays the publisher's own audio where there is one. Nothing leaves your device for narration, and Listen works fully without a key.
-- **With your key** (Settings › Listening), Listen reads with OpenAI's voices instead of Apple's. Wherever Listen runs (in a story, Play All, CarPlay, Siri or a request from your Apple Watch), the story's text, which can begin with its headline and source, is sent to OpenAI in pieces of about 500 characters, with your chosen voice, model and speed. Choosing an OpenAI voice in Settings plays a short, fixed sample sentence through OpenAI. Remove the key to go back to Apple's voices.
-
-In every case:
-
-- **Your OpenAI API key is your own.** You create it at [platform.openai.com](https://platform.openai.com), pay OpenAI directly for what you use, and enter it in Dispatch. Dispatch keeps it in this device's Keychain, where it never moves to another iPhone, even from a backup; Remove Key or Delete All Data deletes it. The key never leaves your device except as the credential on your own requests to OpenAI.
-- **Nothing about you is added.** No user identifier, device information, advertising ID, account information or email address is included in any request.
-- **Dispatch operates no servers between you and OpenAI.** Your request goes straight from your device to api.openai.com.
-- **OpenAI's privacy policy applies** to what's sent to its API. See [openai.com/policies/privacy-policy](https://openai.com/policies/privacy-policy) for how OpenAI handles it, including its default retention of up to 30 days for abuse monitoring (subject to OpenAI's policies, which may change).
-
-If you don't add an OpenAI key, **nothing is ever sent to OpenAI.**
+Dispatch sends nothing to OpenAI, and none of its AI features uses a server.
 
 ## Publisher Logins (Optional)
 
@@ -155,22 +153,21 @@ Dispatch has no accounts and asks no one for personal information, so it does no
 
 ## Compliance
 
-- **GDPR (EU).** Dispatch itself holds no personal data about you: it has no accounts and no server that receives your reading. Article text you send to OpenAI with your own key is your own arrangement with OpenAI, under your agreement with them. YouTube's player and Google's video service are governed by Google's Privacy Policy.
+- **GDPR (EU).** Dispatch itself holds no personal data about you: it has no accounts and no server that receives your reading. YouTube's player and Google's video service are governed by Google's Privacy Policy.
 - **CCPA (California).** Dispatch does not sell or share your personal information. When it asks Google's ad-insertion service for a Bloomberg video, it tells Google you've opted out of the sale of your personal information.
 - **App Tracking Transparency (Apple).** Dispatch does not track you across apps or websites, so it shows no tracking prompt.
 
 ## App Store privacy label
 
-Dispatch's App Store privacy label answers **"Yes"** to "Do you or your third-party partners collect data from this app?", for two reasons: OpenAI, when you add your own key for Listen, and YouTube's embedded player.
+Dispatch's App Store privacy label answers **"Yes"** to "Do you or your third-party partners collect data from this app?", because of YouTube's embedded player and the ads Google's service adds to some publishers' videos.
 
 | Data type | Purpose | Linked to you | Used to track you | Why |
 |---|---|---|---|---|
-| Browsing History | App Functionality | Yes | No | Listen sends the story you're hearing to OpenAI with your own key, which is your OpenAI account. |
 | Usage Data: Product Interaction | Analytics, Third-Party Advertising | No | No | YouTube's player |
 | Usage Data: Advertising Data | Third-Party Advertising | No | No | YouTube's player, and the ads Google's service adds to Bloomberg's videos and the CBS News stream |
 | Diagnostics: Performance Data | Analytics | No | No | YouTube's player |
 
-Every other data type: not collected.
+Every other data type: not collected. Pages you open in Dispatch's browser are the open web, as they would be in Safari, so the label doesn't describe them.
 
 ## Changes to This Policy
 
