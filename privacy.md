@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Dispatch Privacy Policy
 
-**Last updated:** October 30, 2026
+**Last updated:** November 9, 2026
 
 ## Summary
 
@@ -90,6 +90,7 @@ Using Dispatch means agreeing to the [YouTube Terms of Service](https://www.yout
 To show you a story's full content, Dispatch also connects to:
 
 - **X,** to show posts embedded in articles. It sends the post's number, with no cookies.
+- **Instagram,** to show posts embedded in articles. It asks only for that post's public embed page, with no cookies.
 - **PressReader,** for the FT's print edition, its front page and its weekend magazines.
 - **rss.app,** which carries one newsletter's feed (Superhuman AI), because the publisher has turned its own feed off.
 - **Trinity Media and Dow Jones,** for some publishers' narration. For The Information and WWD, Trinity's player loads in a web view you don't see, which keeps no cookies or website data, only until it names the story's narration file; it's closed then and plays nothing. Dispatch blocks the player's own measurement there, and any third-party ad, analytics or tracking code.
