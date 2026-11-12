@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Dispatch Privacy Policy
 
-**Last updated:** November 9, 2026
+**Last updated:** November 12, 2026
 
 ## Summary
 
@@ -81,7 +81,7 @@ Background App Refresh follows the system switch (Settings › General › Backg
 
 Dispatch plays YouTube videos inside the app with YouTube's embedded player, one of the YouTube API Services. When a YouTube video loads or plays, YouTube receives information about it directly from the player and may show ads in it. [Google's Privacy Policy](https://www.google.com/policies/privacy) covers how Google and YouTube use that information. The player keeps no YouTube cookies or website data between sessions.
 
-Dispatch stores on your device only the lists of videos it shows, their pictures, your video playlist, BBC News's list of live streams with the one that last played in your region, and the length YouTube's player reports for each video you play. To show a YouTube video's length before you play it, Dispatch asks YouTube's Data API, another of the YouTube API Services, about that video, sending only its video ID, and keeps the length on your device for up to 30 days. Each is fetched again from YouTube or dropped within 30 days, and YouTube's pictures are kept out of the app's web cache; a video you save stays in Saved until you remove it. They are never sent anywhere, and Delete All Data removes them. Videos from publishers, and YouTube's player, may include ads those third parties serve.
+Dispatch stores on your device only the lists of videos it shows, their pictures, your video playlist, BBC News's list of live streams with the one that last played in your region, and the length YouTube's player reports for each video you play. To show a YouTube video's length before you play it, Dispatch asks YouTube's Data API, another of the YouTube API Services, about that video, sending only its video ID, and keeps the length on your device for up to 30 days. Each is fetched again from YouTube or dropped within 30 days, and YouTube's pictures are kept out of the app's web cache; a video you save stays in Saved until you remove it. They stay on your device, apart from the video IDs Dispatch sends for that length lookup, and Delete All Data removes them. Videos from publishers, and YouTube's player, may include ads those third parties serve.
 
 Using Dispatch means agreeing to the [YouTube Terms of Service](https://www.youtube.com/t/terms); see the [Terms of Use](https://liamwalsh-redirect.github.io/dispatch/terms).
 
