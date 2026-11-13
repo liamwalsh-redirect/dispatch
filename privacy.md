@@ -21,7 +21,7 @@ Dispatch itself collects no personal data. Specifically:
 - **No tracking.** No advertising identifiers, no device fingerprinting, no cross-app tracking. The app shows no App Tracking Transparency prompt because it doesn't track you.
 - **No advertising of our own.** Dispatch shows no ads and contains no ad SDKs. Videos and live streams from publishers, and YouTube's player, can include ads that those companies serve. Pages you open in Dispatch's browser show the publisher's own ads, as they would in Safari.
 - **No third-party SDKs.** The app is built only on Apple's frameworks. To play YouTube videos it loads YouTube's embedded player (see [YouTube videos](#youtube-videos)).
-- **No Dispatch servers.** Dispatch has no backend of its own. Dispatches (the editor's picks) is read from Apple's CloudKit, and if you turn on notifications for new picks, Apple keeps a subscription for your iCloud account so it can deliver them. The developer receives only emails you choose to send from Send Feedback or "Found a bug? Tell me."
+- **No Dispatch servers.** Dispatch has no backend of its own. Dispatches (the editor's picks) is read from Apple's CloudKit, and if you turn on notifications for new picks or new magazine issues, Apple keeps a subscription for your iCloud account so it can deliver them. The developer receives only emails you choose to send from Send Feedback or "Found a bug? Tell me."
 
 The App Store privacy label for Dispatch, and why, is at the end of this policy.
 
@@ -42,13 +42,15 @@ The following data is stored on your device and, where noted, synced across your
 
 All iCloud syncing goes through your own iCloud account and is governed by Apple's privacy policy and your iCloud settings. Dispatch has no access to your iCloud account information. Dispatches reads from a public CloudKit database that holds only what Dispatch's editor publishes there, such as the picks; nothing you read or save is written there.
 
+**Writer profiles.** Dispatch shows the photos and short bios of the journalists whose stories it lists. They come from the writers' own publishers' websites and from their public profiles on Bluesky, Wikidata and Wikimedia Commons, and Dispatch keeps them in its public CloudKit database so every reader sees the same profile. Your device doesn't contact Bluesky or Wikimedia to show them. Wikimedia photos are credited to their authors.
+
 If you save a photo from an article, Dispatch writes it to your photo library with your permission. It asks only to add photos, so it can't see your library.
 
 ## Delete All Data
 
 You can delete everything Dispatch has stored at any time from **Settings › Privacy & Data › Delete All Data**. This is provided under Apple App Store Review Guideline 5.1.1(v).
 
-Delete All Data wipes all Dispatch data on this device: reading history and read marks, saved articles and their offline copies, highlights, collections, reading positions, your listening queue, AI Suite results, source preferences (which sources are on, which you prefer or mute, and their order), followed topics and writers, custom feeds, past newsletter editions, video lists, YouTube's video pictures and your video playlist, and your sign-in to The Information's subscriber feed. Cookies and website data that publishers' pages set, when you signed in or in Dispatch's browser, are cleared too, so you'll need to sign in to those publishers again. It also removes your notification subscription for new picks and clears Dispatch on your Apple Watch. Dispatch empties what it holds in memory first, so it doesn't save your earlier data back afterwards.
+Delete All Data wipes all Dispatch data on this device: reading history and read marks, saved articles and their offline copies, highlights, collections, reading positions, your listening queue, AI Suite results, source preferences (which sources are on, which you prefer or mute, and their order), followed topics and writers, custom feeds, past newsletter editions, video lists, YouTube's video pictures and your video playlist, and your sign-in to The Information's subscriber feed. Cookies and website data that publishers' pages set, when you signed in or in Dispatch's browser, are cleared too, so you'll need to sign in to those publishers again. It also removes your notification subscriptions for new picks and new magazine issues, and your Live Q&A reminders, and clears Dispatch on your Apple Watch. Dispatch empties what it holds in memory first, so it doesn't save your earlier data back afterwards.
 
 **What Delete All Data doesn't remove:**
 
@@ -66,12 +68,12 @@ Dispatch makes network requests in two situations:
 
 The requests are:
 
-- **Feed fetches.** Dispatch fetches publishers' public RSS and Atom feeds to show headlines. They carry no identifier from Dispatch. Feeds you've signed in to (Substack, The Information's subscriber feed, custom feeds with a login) send that sign-in to that publisher only.
+- **Feed fetches.** Dispatch fetches publishers' public RSS and Atom feeds, and Bloomberg's public list of its latest stories, to show headlines. They carry no identifier from Dispatch. Feeds you've signed in to (Substack, The Information's subscriber feed, custom feeds with a login) send that sign-in to that publisher only.
 - **Weekend section pages.** For the Weekend, Dispatch reads a few publishers' section pages (Bloomberg, The Information and The Washington Post) at most once a day, with no cookies. If you're signed in to The Wall Street Journal and The Saturday Essay is on, it reads that page once each Saturday while the app is open, in a hidden web view that starts with no cookies and keeps none afterwards, so that read is signed out. The page's own scripts run there, without its third-party ad, analytics and tracking code.
 - **Article pages.** When you open a headline, the app fetches the article's web page to show it in Dispatch's reader. This is the same as visiting the page in a web browser: if you've signed in to that publisher, your sign-in goes with the request, as it would in Safari. Some publishers' pages load in a web view you don't see; Dispatch blocks their third-party ad, analytics and tracking code there. If Dispatch's reader can't show a story, the page opens in Dispatch's browser instead (see below).
 - **Today's papers.** The New York Times's and The Wall Street Journal's print editions load in a web view you don't see, as they would in Safari: with your sign-in to that publisher if you have one, and with the page's own scripts but without its third-party ad, analytics and tracking code. If The New York Times asks to check you're a person, Newspapers shows Verify, which opens the page for you to answer.
 - **Images.** Article photos and podcast artwork load from publishers' servers over HTTPS.
-- **Video lists.** Media › Videos and the Weekend's Watch & listen read each channel's public video feed from YouTube, with no cookies, and show each video's picture from YouTube's image server.
+- **Video lists.** Media › Videos and the Weekend's Watch & listen read each channel's public video feed from YouTube, with no cookies, and show each video's picture from YouTube's image server. For a publisher's own video, Dispatch reads that video's page once, with no cookies, when its row first comes on screen, to show its picture, length and description.
 - **Live TV and video.** Bloomberg TV and CBS News live streams, and Bloomberg's videos, load when you choose to watch them. Bloomberg's videos and the CBS News stream are delivered by Google's ad-insertion service, which adds those publishers' ads to the stream. Dispatch's request for a Bloomberg video sends no cookies and no advertising identifier, and tells Google you've opted out of the sale of your personal information. Google receives your IP address and the video requested, and [Google's Privacy Policy](https://policies.google.com/privacy) applies. BBC News live plays BBC News's own stream on YouTube, in YouTube's embedded player (see [YouTube videos](#youtube-videos)); to pick the stream offered in your iPhone's region, Dispatch reads BBC News's public list of live streams from YouTube, at most once a day while BBC News is chosen, with no cookies; your region setting isn't sent. While BBC News's US stream plays, Dispatch also reads that day's schedule from bbc.co.uk, at most once a day, with no cookies.
 - **Podcasts.** Podcast feeds and episodes come from each podcast's own host.
 
@@ -132,9 +134,13 @@ When a publisher's row in **Settings › Sources › Log in to Sources** shows y
 
 If you sign in to The Information's subscriber feed, your username and password are kept in this device's Keychain (never synced) and sent only to theinformation.com with each feed request. Remove them with Sign Out under **Settings › Sources › Log in to Sources › The Information**, or with Delete All Data.
 
-## Notifications for Dispatches
+## Notifications
 
 If you turn on notifications for new picks (**Settings › Notifications › New Pick Alerts**), Apple's CloudKit keeps a subscription for your iCloud account so it can send them. Turning them off, or Delete All Data, removes it.
+
+If you turn on alerts for new magazine issues (**Settings › Notifications › New Issues**, or a magazine's bell), Apple's CloudKit keeps a subscription for the magazines you chose, so it can tell you when Dispatch's editor publishes a new issue. Turning them off, or Delete All Data, removes it. The morning alert for today's papers, and alerts for issues Dispatch finds itself, are scheduled on your device and add no request.
+
+Reminders for Bloomberg's Live Q&A sessions are scheduled on your device. If you ask to be told when a session's recording is posted, Dispatch reads that session's page on bloomberg.com up to five times, only while the app is open.
 
 ## Feedback
 
